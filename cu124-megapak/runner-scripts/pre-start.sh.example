@@ -3,6 +3,11 @@ set -eu
 
 #echo "[INFO] Continue without pre-start script."
 
-if [ ! -f /root/ComfyUI/my_workflows/example_flux_workflow.json ]; then
-    cp /root/runner-scripts/example_flux_workflow.json /root/ComfyUI/my_workflows/example_flux_workflow.json
+if [ -d /root/runner-scripts ]; then
+    if [ ! -d /root/ComfyUI/my_workflows ]; then
+        mkdir -p /root/ComfyUI/my_workflows
+    fi
+    if [ ! -f /root/ComfyUI/my_workflows/example_flux_workflow.json ]; then
+        cp /root/runner-scripts/example_flux_workflow.json /root/ComfyUI/my_workflows/example_flux_workflow.json
+    fi
 fi
