@@ -1,4 +1,8 @@
 #!/bin/bash
 set -eu
 
-echo "[INFO] Continue without pre-start script."
+#echo "[INFO] Continue without pre-start script."
+
+if [ ! -f /root/ComfyUI/my_workflows/example_flux_workflow.json ]; then
+    cp /root/runner-scripts/example_flux_workflow.json /root/ComfyUI/my_workflows/example_flux_workflow.json
+fi

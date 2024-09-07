@@ -15,6 +15,9 @@ https://huggingface.co/madebyollin/taesd/resolve/main/taesd_decoder.safetensors
 https://huggingface.co/madebyollin/taesdxl/resolve/main/taesdxl_decoder.safetensors
   dir=vae_approx
   out=taesdxl_decoder.safetensors
+https://huggingface.co/black-forest-labs/FLUX.1-schnell/resolve/main/ae.safetensors
+  dir=vae
+  out=ae.safetensors
 
 # Upscale
 
@@ -36,3 +39,19 @@ https://huggingface.co/datasets/gsdf/EasyNegative/resolve/main/EasyNegative.safe
 https://huggingface.co/lenML/DeepNegative/resolve/main/NG_DeepNegative_V1_75T.pt
   dir=embeddings
   out=ng_deepnegative_v1_75t.pt
+
+# UNET
+
+https://huggingface.co/black-forest-labs/FLUX.1-schnell/resolve/main/flux1-schnell.safetensors
+  dir=unet
+  out=flux1-schnell.safetensors
+
+
+# CLIP
+
+https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors
+  dir=clip
+  out=t5xxl_fp16.safetensors
+https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/clip_l.safetensors
+  dir=clip
+  out=clip_l.safetensors

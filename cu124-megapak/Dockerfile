@@ -23,26 +23,26 @@ baseurl=https://developer.download.nvidia.com/compute/cuda/repos/opensuse15/x86_
 enabled=1\n\
 gpgcheck=1\n\
 gpgkey=https://developer.download.nvidia.com/compute/cuda/repos/opensuse15/x86_64/D42D0685.pub\n" \
-        > /etc/zypp/repos.d/cuda-opensuse15.repo \
-    && zypper --gpg-auto-import-keys \
-        install --no-confirm --no-recommends --auto-agree-with-licenses \
-cuda-cccl-12-4 \
-cuda-command-line-tools-12-4 \
-cuda-compat-12-4 \
-cuda-cudart-12-4 \
-cuda-cudart-devel-12-4 \
-cuda-libraries-12-4 \
-cuda-libraries-devel-12-4 \
-cuda-minimal-build-12-4 \
-cuda-nvcc-12-4 \
-cuda-nvml-devel-12-4 \
-cuda-nvprof-12-4 \
-cuda-nvrtc-devel-12-4 \
-cuda-nvtx-12-4 \
-libcublas-12-4 \
-libcublas-devel-12-4 \
-libnpp-12-4 \
-libnpp-devel-12-4
+        > /etc/zypp/repos.d/cuda-opensuse15-x86_64.repo \
+    && zypper --gpg-auto-import-keys install -y --no-confirm --no-recommends --auto-agree-with-licenses \
+    cuda-toolkit-12-4 \
+    cuda-cccl-12-4 \
+    cuda-command-line-tools-12-4 \
+    cuda-compat-12-4 \
+    cuda-cudart-12-4 \
+    cuda-cudart-devel-12-4 \
+    cuda-libraries-12-4 \
+    cuda-libraries-devel-12-4 \
+    cuda-minimal-build-12-4 \
+    cuda-nvcc-12-4 \
+    cuda-nvml-devel-12-4 \
+    cuda-nvprof-12-4 \
+    cuda-nvrtc-devel-12-4 \
+    cuda-nvtx-12-4 \
+    libcublas-12-4 \
+    libcublas-devel-12-4 \
+    libnpp-12-4 \
+    libnpp-devel-12-4
 
 ENV PATH="${PATH}:/usr/local/cuda-12.4/bin" \
     LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:/usr/local/cuda-12.4/lib64" \
